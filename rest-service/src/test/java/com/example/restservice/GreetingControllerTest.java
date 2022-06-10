@@ -20,6 +20,7 @@ class GreetingControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    // Test 1
     @Test
     public void root() throws Exception{
 
