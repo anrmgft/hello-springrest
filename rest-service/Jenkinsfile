@@ -10,10 +10,10 @@ pipeline {
                 //git branch: 'main', url: 'https://github.com/anrmgft/hello-springrest.git'
 
                 // Run Maven on a Unix agent.
-
+                withGradle {
                 sh '''cd rest-service
-./gradlew test assemble'''
-
+                ./gradlew test assemble'''
+                }
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
